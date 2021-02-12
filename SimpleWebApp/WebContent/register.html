@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type = "text/javascript">
+    function validate() {
+      
+      if( document.RegForm.mobile.value == "" ) {
+         alert( "Please provide your mobile!" );
+         document.RegForm.mobile.focus() ;
+         return false;
+      }
+
+      if( document.RegForm.password.value == "" ) {
+         alert( "Please provide your Password" );
+         document.RegForm.password.focus() ;
+         return false;
+      }
+      if( document.RegForm.name.value == "" ) {
+         alert( "Please provide your Name" );
+         document.RegForm.name.focus() ;
+         return false;
+      }
+      if( document.RegForm.email.value == "" ) {
+         alert( "Please provide your email" );
+         document.RegForm.email.focus() ;
+         return false;
+      }
+      
+      
+      return true;
+   }
+   
+
+  </script>
+  <link rel="stylesheet" href="webpage.css">
+  <link rel="stylesheet" href="register.css">
+  <title>Register</title>
+</head>
+<body bgcolor="grey">
+  <ul>
+   <!-- <li><img id="img2" src="snail.png.png"></li> -->
+    <li ><a href="index.html">Home</a></li>
+  </ul>
+  
+  <div class="container">
+    <form name="RegForm" method="post" action="./Register">
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="name" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">E-Mail</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="abc"name="email" title="numbers" placeholder="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="password">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" name="password" placeholder="atleast  1 uppercase, lowercase letter, 1 number and 1 special character" required>
+        </div>
+      </div>
+            <div class="row">
+        <div class="col-25">
+          <label for="mobile">Mobile no.</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="mobile" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="submit">
+          <input type="submit" value="Login" onclick="validate()"/>  
+        </div>
+        </div>
+        </form>
+        <div class="login">
+          <button class="button"><a href="login.html">already a member ?</a></button>
+      </div>
+  </div>
+</body>
+</html>

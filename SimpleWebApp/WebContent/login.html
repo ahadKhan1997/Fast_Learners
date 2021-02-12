@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="webpage.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="login(2).css">
+  <script type = "text/javascript">
+
+    function validate() {
+      
+         if( document.myForm.name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.RollNumber.focus() ;
+            return false;
+         }
+         if( document.myForm.password.value == "" ) {
+            alert( "Please provide your Password" );
+            document.myForm.password.focus() ;
+            return false;
+         }
+         return( true );
+      }
+
+  </script>
+  <title>Login</title>
+</head>
+<body bgcolor="grey">
+  <ul>
+   <!-- <li><img id="img2" src="snail.png.png"></li> -->
+    <li ><a href="home.html">Home</a></li>
+  </ul>
+  <div class="container">
+    <form name = "myForm" method="post" action="./Login">
+        <div class="row">
+        <div class="col-25">
+          <label for="Name">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="name" placeholder="Enter your name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="password">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" name="password" placeholder="Enter your password">
+        </div>
+      </div>
+        <div class="row">
+        <div class="login">
+          <input type="submit" value="Login" onclick="validate()"/> 
+      </div>
+	</div>
+	</form>
+  </div>
+  
+</body>
+</html>
